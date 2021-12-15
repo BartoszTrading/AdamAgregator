@@ -1,0 +1,27 @@
+{
+    "ogolne":{
+        "only_new":"False",
+        "date":"2021-12-12 10:45",
+        "query":"rolex zegarek"
+    },
+    "olx":{
+        "description": "False",
+        "ads":"False"
+    },
+    "sprzedajemy":{
+        "description": "False",
+        "ads":"False"
+    },
+    "lento":{
+        "description": "False",
+        "ads":"False"
+    },
+    "allegro":{
+        "ads":"False"
+    },
+    "gumtree":{
+        "ads":"False"
+    }
+    
+
+}

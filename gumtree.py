@@ -57,12 +57,16 @@ class gumtree:
         soup = BeautifulSoup(response.text,'html.parser')
         if self.ads_bool:
             cells_u = soup.find('div',{'class','topAdsContainer'})
-            cells = cells_u.find_all('div',{'class':'tileV1'})
-            for cell in cells:
-                href = cell.find('a',{'class':'href-link tile-title-text'})
-                link_list.append([href['href']])
+            if cells_u != None:
+                
+                cells = cells_u.find_all('div',{'class':'tileV1'})
+                for cell in cells:
+                    href = cell.find('a',{'class':'href-link tile-title-text'})
+                    link_list.append([href['href']])
         
         cells_u = soup.find('div',{'class','view'})
+        if cells_u == None:
+            return []
         cells = cells_u.find_all('div',{'class':'tileV1'})
         for cell in cells:
             href = cell.find('a',{'class':'href-link tile-title-text'})
